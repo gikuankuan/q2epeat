@@ -42,8 +42,8 @@
                     $.get("api/pw.php",{acc,pw},function(res){
                         console.log(res)
                         if(res == 1){
-                            if(acc = 'admin'){
-                                location.href="?do=admin.php"
+                            if(acc == 'admin'){
+                                location.href="admin.php"
                             }else{
                                 location.href="index.php"
                             }

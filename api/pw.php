@@ -3,11 +3,11 @@ include "../base.php";
 
 $User=new DB('user');
 
-$acc = $User->find(["acc"=>$_GET['acc'],"pw"=>$_GET['pw']]);
+$chk = $User->find(["acc"=>$_GET['acc'],"pw"=>$_GET['pw']]);
 
-if(!empty($acc)){
+if(!empty($chk)){
     echo "1";
-    $_SESSION['login']=$acc;
+    $_SESSION['login']=$_GET['acc'];
 }else{
     echo "0";
 

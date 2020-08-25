@@ -25,8 +25,9 @@ include "base.php";
 			<?php
 			$Total =new DB('total');
 			$t = $Total->find(["date"=>date("Y-m-d")]);
+			
 			?>
-			<?= date("m月d號l")?> | 今日瀏覽:<?= $t['total'];?> | 累積瀏覽: 36 
+			<?= date("m月d號l")?> | 今日瀏覽: <?= $t['total'];?>| 累積瀏覽: 36 
 			<span style="float: right;"> 
 			<a href="index.php">回首頁</a>
 		</span>
